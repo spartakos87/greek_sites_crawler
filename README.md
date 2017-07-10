@@ -8,7 +8,7 @@ Only you need to have is Python3 and the [BeautfulSoup](https://www.crummy.com/s
 
 ### Let see how you can run it
 
-python3 greek_sites_crawler -url "<url>"
+python3 greek_sites_crawler -url "site's url"
 
 
 #### Return 
