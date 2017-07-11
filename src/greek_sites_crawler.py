@@ -30,6 +30,7 @@ from makeleio import makeleio
 from contra import contra
 from gazzetta import gazzetta
 from alfavita import alfavita
+from oneman import oneman
 import credits
 
 def greek_sites_crawler(url):
@@ -64,7 +65,7 @@ def greek_sites_crawler(url):
 	site['gazzetta']=gazzetta
 	site['dikaiologitika']= dikaiologitika
 	site['alfavita'] =alfavita
-
+	site['oneman']=oneman
 	url = 	url.split('.')[1]
 	if url =='in':
 		url = url+'_gr'
@@ -76,6 +77,6 @@ def greek_sites_crawler(url):
 
 if __name__=='__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-url",help="Sites which can crawl:skai,cnn,newsbomb,newsit,newsbeast,protothema,zougla,t    ovima,avgi,capital,documentonews,efsyn,enikos,huffingtonpost,iefimerida,in_gr,left,liberal,naftemporiki,news247,noo    z,protagon,tanea,thetoc",type=str)
+	parser.add_argument("-url",help="Sites which can crawl:skai,cnn,newsbomb,newsit,newsbeast,protothema,zougla,tovima,avgi,capital,documentonews,efsyn,enikos,huffingtonpost,iefimerida,in_gr,left,liberal,naftemporiki,news247,noo    z,protagon,tanea,thetoc",type=str)
 	args = parser.parse_args()
 	greek_sites_crawler(args.url)
