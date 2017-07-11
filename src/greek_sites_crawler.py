@@ -9,7 +9,7 @@ from newsbeast import newsbeast
 from protothema import protothema
 from zougla import zougla
 from tovima import tovima
-
+from dikaiologitika import dikaiologitika
 from avgi import avgi
 from capital import capital
 from documentonews import documentonews
@@ -61,6 +61,7 @@ def greek_sites_crawler(url):
 	site['makeleio']=makeleio
 	site['contra']=contra
 	site['gazzetta']=gazzetta
+	site['dikaiologitika']= dikaiologitika
 
 	url = 	url.split('.')[1]
 	if url =='in':
