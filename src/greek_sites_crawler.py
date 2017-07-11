@@ -26,6 +26,9 @@ from nooz import nooz
 from  protagon import protagon
 from tanea import tanea
 from thetoc import thetoc
+from makeleio import makeleio
+from contra import contra
+from gazzetta import gazzetta
 import credits
 
 def greek_sites_crawler(url):
@@ -55,6 +58,10 @@ def greek_sites_crawler(url):
 	site['protagon']=protagon
 	site['tanea']=tanea
 	site['thetoc']=thetoc
+	site['makeleio']=makeleio
+	site['contra']=contra
+	site['gazzetta']=gazzetta
+
 	url = 	url.split('.')[1]
 	if url =='in':
 		url = url+'_gr'
