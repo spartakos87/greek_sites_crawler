@@ -29,6 +29,7 @@ from thetoc import thetoc
 from makeleio import makeleio
 from contra import contra
 from gazzetta import gazzetta
+from alfavita import alfavita
 import credits
 
 def greek_sites_crawler(url):
@@ -62,6 +63,7 @@ def greek_sites_crawler(url):
 	site['contra']=contra
 	site['gazzetta']=gazzetta
 	site['dikaiologitika']= dikaiologitika
+	site['alfavita'] =alfavita
 
 	url = 	url.split('.')[1]
 	if url =='in':
