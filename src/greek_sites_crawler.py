@@ -31,6 +31,7 @@ from contra import contra
 from gazzetta import gazzetta
 from alfavita import alfavita
 from oneman import oneman
+from pathfinder import pathfinder
 import credits
 
 def greek_sites_crawler(url):
@@ -66,6 +67,8 @@ def greek_sites_crawler(url):
 	site['dikaiologitika']= dikaiologitika
 	site['alfavita'] =alfavita
 	site['oneman']=oneman
+	site['pathfinder']=pathfinder
+
 	url = 	url.split('.')[1]
 	if url =='in':
 		url = url+'_gr'
