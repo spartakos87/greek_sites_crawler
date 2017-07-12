@@ -32,43 +32,46 @@ from gazzetta import gazzetta
 from alfavita import alfavita
 from oneman import oneman
 from pathfinder import pathfinder
+from kontranews import kontranews
 import credits
+
+
+site = {}
+site['skai']=skai
+site['cnn']=cnn
+site['newsbomb']=newsbomb
+site['newsit'] = newsit
+site['newsbeast'] = newsbeast
+site['protothema']=protothema
+site['zougla']=zougla
+site['tovima']=tovima
+site['avgi']= avgi
+site['capital']=capital
+site['documentonews']=documentonews
+site['efsyn']=efsyn
+site['enikos']=enikos
+site['huffingtonpost']=huffingtonpost
+site['iefimerida']=iefimerida
+site['in_gr']=in_gr
+site['left']=left
+site['liberal']=liberal
+site['naftemporiki']=naftemporiki
+site['news247']=news247
+site['nooz']=nooz
+site['protagon']=protagon
+site['tanea']=tanea
+site['thetoc']=thetoc
+site['makeleio']=makeleio
+site['contra']=contra
+site['gazzetta']=gazzetta
+site['dikaiologitika']= dikaiologitika
+site['alfavita'] =alfavita
+site['oneman']=oneman
+site['pathfinder']=pathfinder
+site['kontranews'] = kontranews
 
 def greek_sites_crawler(url):
 	html = get_html(url)
-	site = {}
-	site['skai']=skai
-	site['cnn']=cnn
-	site['newsbomb']=newsbomb
-	site['newsit'] = newsit
-	site['newsbeast'] = newsbeast
-	site['protothema']=protothema
-	site['zougla']=zougla
-	site['tovima']=tovima
-	site['avgi']= avgi
-	site['capital']=capital
-	site['documentonews']=documentonews
-	site['efsyn']=efsyn
-	site['enikos']=enikos
-	site['huffingtonpost']=huffingtonpost
-	site['iefimerida']=iefimerida
-	site['in_gr']=in_gr
-	site['left']=left
-	site['liberal']=liberal
-	site['naftemporiki']=naftemporiki
-	site['news247']=news247
-	site['nooz']=nooz
-	site['protagon']=protagon
-	site['tanea']=tanea
-	site['thetoc']=thetoc
-	site['makeleio']=makeleio
-	site['contra']=contra
-	site['gazzetta']=gazzetta
-	site['dikaiologitika']= dikaiologitika
-	site['alfavita'] =alfavita
-	site['oneman']=oneman
-	site['pathfinder']=pathfinder
-
 	url = 	url.split('.')[1]
 	if url =='in':
 		url = url+'_gr'
@@ -79,7 +82,8 @@ def greek_sites_crawler(url):
 		return site[url](html)
 
 if __name__=='__main__':
+	helpString = 'Sites which we can crawl: {}'.format(','.join(site))
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-url",help="Sites which can crawl:skai,cnn,newsbomb,newsit,newsbeast,protothema,zougla,tovima,avgi,capital,documentonews,efsyn,enikos,huffingtonpost,iefimerida,in_gr,left,liberal,naftemporiki,news247,noo    z,protagon,tanea,thetoc",type=str)
+	parser.add_argument("-url",help=helpString,type=str)
 	args = parser.parse_args()
 	greek_sites_crawler(args.url)
