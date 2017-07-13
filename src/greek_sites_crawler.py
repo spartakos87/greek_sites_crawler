@@ -33,6 +33,8 @@ from alfavita import alfavita
 from oneman import oneman
 from pathfinder import pathfinder
 from kontranews import kontranews
+from parapolitika import parapolitika
+
 import credits
 
 
@@ -69,6 +71,7 @@ site['alfavita'] =alfavita
 site['oneman']=oneman
 site['pathfinder']=pathfinder
 site['kontranews'] = kontranews
+site['parapolitika']= parapolitika
 
 def greek_sites_crawler(url):
 	html = get_html(url)
