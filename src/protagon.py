@@ -1,6 +1,12 @@
 
 def protagon(html):
-	topic = html.find("a",{"class":"caeee"}).text
+	try:
+		topic = html.find("a",{"class":"caeee"}).text
+	except:
+		try:
+			topic =html.find("div",{"class":"get-category"}).text
+		except:
+			topic =''
 	title = html.title.text
 	article = html.find("div",{"class":"content_space"}).text
 	publish_time = html.find("span",{"class":"generalight uppercase"}).text
