@@ -1,6 +1,9 @@
 
 def dikaiologitika(html):
-	topic=html.find("div",{"class":"item__category"}).text.split('\n')[-2]
+	try:
+		topic=html.find("div",{"class":"item__category"}).text.split('\n')[-2]
+	except:
+		topic=''
 	title = html.title.text
 	article = html.find("div",{"class":"item__fulltext"}).text
 	publish_time = html.find("span",{"itemprop":"datePublished"}).text
