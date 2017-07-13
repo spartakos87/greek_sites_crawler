@@ -81,7 +81,10 @@ import credits
 
 def greek_sites_crawler(url):
 	html = get_html(url)
-	url = 	url.split('.')[1]
+	if 'left.gr' in url:
+		url='left'
+	else:
+		url = 	url.split('.')[1]
 	if url =='in':
 		url = url+'_gr'
 	if site.get(url,None)==None:
