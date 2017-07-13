@@ -34,6 +34,8 @@ from oneman import oneman
 from pathfinder import pathfinder
 from kontranews import kontranews
 from parapolitika import parapolitika
+from lifo import lifo
+from kathimerini import kathimerini
 
 import credits
 
@@ -72,6 +74,10 @@ site['oneman']=oneman
 site['pathfinder']=pathfinder
 site['kontranews'] = kontranews
 site['parapolitika']= parapolitika
+site['lifo']=lifo
+site['kathimerini']=kathimerini
+
+import credits
 
 def greek_sites_crawler(url):
 	html = get_html(url)
