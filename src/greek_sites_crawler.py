@@ -90,8 +90,11 @@ def greek_sites_crawler(url):
 	if site.get(url,None)==None:
 		print("This site dont provider yet \n")
 	else:
-		print( site[url](html))
-		return site[url](html)
+		try:
+			print( site[url](html))
+			return site[url](html)
+		except:
+			pass
 
 if __name__=='__main__':
 	helpString = 'Sites which we can crawl: {}'.format(','.join(site))
