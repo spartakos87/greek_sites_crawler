@@ -36,6 +36,7 @@ from kontranews import kontranews
 from parapolitika import parapolitika
 from lifo import lifo
 from kathimerini import kathimerini
+from cerebrux import cerebrux
 
 import credits
 
@@ -76,12 +77,15 @@ site['kontranews'] = kontranews
 site['parapolitika']= parapolitika
 site['lifo']=lifo
 site['kathimerini']=kathimerini
+site['cerebrux'] = cerebrux
 
 import credits
 
 def greek_sites_crawler(url):
 	html = get_html(url)
-	if 'left.gr' in url:
+	if 'cerebrux.net' in url:
+		url = 'cerebrux'
+	elif 'left.gr' in url:
 		url='left'
 	else:
 		url = 	url.split('.')[1]
