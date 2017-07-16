@@ -37,7 +37,12 @@ from parapolitika import parapolitika
 from lifo import lifo
 from kathimerini import kathimerini
 from cerebrux import cerebrux
-
+from fimotro import fimotro
+from altsantiri import altsantiri
+from madata import madata
+from karfitsa import karfitsa
+from paraskhnio import paraskhnio
+from press_gr import press_gr
 import credits
 
 
@@ -78,6 +83,12 @@ site['parapolitika']= parapolitika
 site['lifo']=lifo
 site['kathimerini']=kathimerini
 site['cerebrux'] = cerebrux
+site['fimotro']=fimotro
+site['altsantiri']=altsantiri
+site['madata']=madata
+site['karfitsa']=karfitsa
+site['paraskhnio']= paraskhnio
+site['press_gr'] = press_gr
 
 import credits
 
@@ -87,6 +98,8 @@ def greek_sites_crawler(url):
 		url = 'cerebrux'
 	elif 'left.gr' in url:
 		url='left'
+	elif 'press-gr.com' in url:
+		url = 'press_gr'
 	else:
 		url = 	url.split('.')[1]
 	if url =='in':
