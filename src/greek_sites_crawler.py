@@ -43,6 +43,7 @@ from madata import madata
 from karfitsa import karfitsa
 from paraskhnio import paraskhnio
 from press_gr import press_gr
+from neolaia import neolaia
 import credits
 
 
@@ -89,8 +90,7 @@ site['madata']=madata
 site['karfitsa']=karfitsa
 site['paraskhnio']= paraskhnio
 site['press_gr'] = press_gr
-
-import credits
+site['neolaia'] = neolaia
 
 def greek_sites_crawler(url):
 	html = get_html(url)
