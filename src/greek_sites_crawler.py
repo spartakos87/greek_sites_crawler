@@ -45,6 +45,7 @@ from paraskhnio import paraskhnio
 from press_gr import press_gr
 from neolaia import neolaia
 from thestival import thestival
+from athensvoice import athensvoice
 
 import credits
 
@@ -94,6 +95,7 @@ site['paraskhnio']= paraskhnio
 site['press_gr'] = press_gr
 site['neolaia'] = neolaia
 site['thestival'] = thestival
+site['athensvoice'] = athensvoice
 
 def greek_sites_crawler(url):
 	html = get_html(url)
