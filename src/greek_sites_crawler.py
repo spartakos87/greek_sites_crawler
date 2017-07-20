@@ -1,6 +1,7 @@
 import argparse
 
 from get_html import get_html
+
 from skai import skai
 from cnn import cnn
 from newsbomb import newsbomb
@@ -48,6 +49,8 @@ from thestival import thestival
 from athensvoice import athensvoice
 from rockap import rockap
 from avopolis import avopolis
+from sinavlia import sinavlia
+
 import credits
 
 
@@ -99,7 +102,8 @@ site['thestival'] = thestival
 site['athensvoice'] = athensvoice
 site['rockap']=rockap
 site['avopolis']=avopolis
-
+site['sinavlia']=sinavlia
+ 
 def greek_sites_crawler(url):
 	html = get_html(url)
 	if 'cerebrux.net' in url:
