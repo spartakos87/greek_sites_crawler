@@ -53,6 +53,8 @@ from sinavlia import sinavlia
 from musicity import musicity
 from athinorama import athinorama
 from clickatlife import clickatlife
+from culturenow import culturenow
+
 import credits
 
 
@@ -108,6 +110,7 @@ site['sinavlia']=sinavlia
 site['musicity']=musicity
 site['athinorama']=athinorama
 site['clickatlife']=clickatlife
+site['culturenow']=culturenow
 
 def greek_sites_crawler(url):
 	html = get_html(url)
