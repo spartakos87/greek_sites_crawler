@@ -51,6 +51,7 @@ from rockap import rockap
 from avopolis import avopolis
 from sinavlia import sinavlia
 from musicity import musicity
+from athinorama import athinorama
 
 import credits
 
@@ -105,6 +106,7 @@ site['rockap']=rockap
 site['avopolis']=avopolis
 site['sinavlia']=sinavlia
 site['musicity']=musicity
+site['athinorama']=athinorama
  
 def greek_sites_crawler(url):
 	html = get_html(url)
