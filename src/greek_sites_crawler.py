@@ -47,7 +47,7 @@ from neolaia import neolaia
 from thestival import thestival
 from athensvoice import athensvoice
 from rockap import rockap
-
+from avopolis import avopolis
 import credits
 
 
@@ -98,6 +98,7 @@ site['neolaia'] = neolaia
 site['thestival'] = thestival
 site['athensvoice'] = athensvoice
 site['rockap']=rockap
+site['avopolis']=avopolis
 
 def greek_sites_crawler(url):
 	html = get_html(url)
