@@ -52,7 +52,7 @@ from avopolis import avopolis
 from sinavlia import sinavlia
 from musicity import musicity
 from athinorama import athinorama
-
+from clickatlife import clickatlife
 import credits
 
 
@@ -107,7 +107,8 @@ site['avopolis']=avopolis
 site['sinavlia']=sinavlia
 site['musicity']=musicity
 site['athinorama']=athinorama
- 
+site['clickatlife']=clickatlife
+
 def greek_sites_crawler(url):
 	html = get_html(url)
 	if 'cerebrux.net' in url:
