@@ -14,7 +14,7 @@ The program is already support 60 greek site and I believe in the future this nu
 - alfavita
 - altsantiri
 - athensvoice
- - athinorama.py
+ - athinorama
   - avgi
   - avopolis
   - capital
