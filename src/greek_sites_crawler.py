@@ -56,6 +56,7 @@ from clickatlife import clickatlife
 from culturenow import culturenow
 from espressonews import espressonews
 from real import real
+from trelokouneli import trelokouneli
 
 import credits
 
@@ -115,6 +116,7 @@ site['clickatlife']=clickatlife
 site['culturenow']=culturenow
 site['espressonews']=espressonews
 site['real'] = real
+site['trelokouneli']=trelokouneli
 
 def greek_sites_crawler(url):
 	html = get_html(url)
