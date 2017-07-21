@@ -60,6 +60,7 @@ from trelokouneli import trelokouneli
 from crashonline import crashonline
 from freepen import freepen
 from flashnews import flashnews
+from newpost import newpost
 
 import credits
 
@@ -123,6 +124,7 @@ site['trelokouneli']=trelokouneli
 site['crashonline']=crashonline
 site['freepen']=freepen
 site['flashnews']= flashnews
+site['newpost']= newpost
 
 def greek_sites_crawler(url):
 	html = get_html(url)
@@ -134,6 +136,8 @@ def greek_sites_crawler(url):
 		url = 'press_gr'
 	elif 'flashnews.gr' in url:
 		url='flashnews'
+	elif 'newpost.gr' in url:
+		url = 'newpost'
 	else:
 		url = 	url.split('.')[1]
 	if url =='in':
