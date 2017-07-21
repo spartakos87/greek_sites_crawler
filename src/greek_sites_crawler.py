@@ -55,6 +55,7 @@ from athinorama import athinorama
 from clickatlife import clickatlife
 from culturenow import culturenow
 from espressonews import espressonews
+from real import real
 
 import credits
 
@@ -113,6 +114,7 @@ site['athinorama']=athinorama
 site['clickatlife']=clickatlife
 site['culturenow']=culturenow
 site['espressonews']=espressonews
+site['real'] = real
 
 def greek_sites_crawler(url):
 	html = get_html(url)
