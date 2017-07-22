@@ -8,4 +8,4 @@ def clickatlife(html):
 			'title':title,
 				'article':article,
 					'publish_time':publish_time
-		}[i for i in a.find("article",{"class":"story"}).text.split('\n') if i !=''][0]
+		}
