@@ -287,8 +287,10 @@ class greek_sites_crawler:
                 }
 
     def culturenow(self):
-        topic = str(a.find("div", {"class": "filters"})).split()
-        topic = [topic[k + 2] for k, i in enumerate(t) if 'current-cat' in i][0].split('>')[1].split('<')[0]
+        topic = str(self.html.find("div", {"class": "filters"})).split()
+        topic = [topic[k + 2] for k, i in enumerate(topic) if 'current-cat' in i][0]
+	if '=' in topic:
+		topic=topic.split('=')[-1]
         title = self.html.title.text
         article = self.html.find("div", {"class": "post-content"}).text
         publish_time = self.html.find("div", {"class": "post-meta"}).text.split('/')[1].strip()
