@@ -103,6 +103,12 @@ class greek_sites_crawler:
             self.url = 'flashnews'
         elif 'newpost.gr' in self.url:
             self.url = 'newpost'
+        elif 'fimotro.gr' in self.url:
+              self.url = 'fimotro'
+        elif 'news247.gr' in self.url:
+              self.url = 'news247'
+        elif 'sinavlia.gr' in self.url:
+              self.url = 'sinavlia'
         else:
             self.url = self.url.split('.')[1]
         if self.url == 'in':
@@ -111,7 +117,8 @@ class greek_sites_crawler:
             print("This site dont provider yet \n")
         else:
             try:
-                return self.clean_data(site[self.url]())
+                data =  self.clean_data(site[self.url]())
+                return data
             except Exception as ex:
                 print(ex)
                 pass
@@ -289,11 +296,11 @@ class greek_sites_crawler:
     def culturenow(self):
         topic = str(self.html.find("div", {"class": "filters"})).split()
         topic = [topic[k + 2] for k, i in enumerate(topic) if 'current-cat' in i][0]
-	if '=' in topic:
-		topic=topic.split('=')[-1]
-        title = self.html.title.text
-        article = self.html.find("div", {"class": "post-content"}).text
-        publish_time = self.html.find("div", {"class": "post-meta"}).text.split('/')[1].strip()
+        if '=' in topic:
+                 topic=topic.split('=')[-1]
+                 title = self.html.title.text
+                 article = self.html.find("div", {"class": "post-content"}).text
+                 publish_time = self.html.find("div", {"class": "post-meta"}).text.split('/')[1].strip()
         return {'topic': topic,
                 'title': title,
                 'article': article,
@@ -541,7 +548,10 @@ class greek_sites_crawler:
                 }
 
     def naftemporiki(self):
-        topic = self.html.find("span", {"itemprop": "articleSection"}).text
+        try:
+           topic = self.html.find("div",{"class":"Breadcrumb"}).text
+        except:
+              topic = ''
         title = self.html.title.text
         article = self.html.find("span", {"id": "spBody"}).text
         publish_time = self.html.find("div", {"class": "Date"}).text
@@ -706,11 +716,11 @@ class greek_sites_crawler:
         topic = self.html.find("h2", {"class": "ArticleCatHeading"}).text
         title = self.html.title.text
         article = self.html.find("div", {"class": "article-content"}).text
-        pubish_time = self.html.find("span", {"class": "time"}).text
+        publish_time = self.html.find("span", {"class": "time"}).text
         return {'topic': topic,
                 'title': title,
                 'article': article,
-                'pubish_time': pubish_time
+                'publish_time': publish_time
                 }
 
     def real(self):
