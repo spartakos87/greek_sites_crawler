@@ -34,7 +34,9 @@ class greek_sites_crawler:
         return self.pick_site()
 
     def pick_site(self):
-        site = { "in_gr": self.in_gr,
+        site = {
+		"ert":self.ert, 
+		"in_gr": self.in_gr,
                   "liberal": self.liberal,
                    "protagon": self.protagon,
                     "kathimerini": self.kathimerini,
@@ -821,3 +823,16 @@ class greek_sites_crawler:
                 'article': article,
                 'publish_time': publish_time
                 }
+    def ert(self):
+       topic='' # It's not exist,maybe in futer be replaced with tags ,which are provided
+       title=self.html.title.text
+       article=self.html.find("div",{"class":"td-ss-main-content"}).text
+       publish_time=self.html.find("time",{"class":"entry-date updated td-module-date"}).text
+       return {'topic': topic,
+                'title': title,
+                'article': article,
+                'publish_time': publish_time
+                }
+
+       publish_time=self.html.find("time",{"class":"entry-date updated td-module-date"}).text
+	
