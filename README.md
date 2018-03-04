@@ -75,12 +75,26 @@ The program is already support 60 greek site and I believe in the future this nu
 ## Dependencies
 Only you need to have is [Python3](https://www.python.org/downloads/) and the [BeautfulSoup](https://pypi.python.org/pypi/beautifulsoup4)
 
-
 ---
+## How to install it
+---
+Clone the repo and then run in folder greek_sites_crawler
+
+```bash
+python3 setup.py install
+```
 ## How to run it
 Go to the folder where the script is and execute the below scrip
 ```python
-python3 greek_sites_crawler -url <"site's url">
+from greek_sites_crawler import greek_sites_crawler as gr
+data = gr(<url>)
+data.get.data()
+{'topic':topic,
+          'title':title,
+                       'article':article,
+					'publish_time':publish_time
+}
+	'
 ```
 
  
