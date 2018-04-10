@@ -83,12 +83,20 @@ Clone the repo and then run in folder greek_sites_crawler
 ```bash
 python3 setup.py install
 ```
+OR
+just type
+
+```bash
+
+pip3 install greek_sites_crawler
+
+```
 ## How to run it
 Go to the folder where the script is and execute the below scrip
 ```python
 from greek_sites_crawler import greek_sites_crawler as gr
 data = gr(<url>)
-data.get.data()
+data.get_data()
 {'topic':topic,
           'title':title,
                        'article':article,
