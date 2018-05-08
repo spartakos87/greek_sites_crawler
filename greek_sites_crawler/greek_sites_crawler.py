@@ -5,7 +5,7 @@ import re
 class greek_sites_crawler:
     """
     Greek sites crawler created by Serepas Filippas aka spartakos87
-    email:serepasf@yahoo.gr
+    email:serepasf@gmail.com
     How to run:
         from greek_sites_crawler import greek_sites_crawler
         data = greek_sites_crawler(<your url>)
